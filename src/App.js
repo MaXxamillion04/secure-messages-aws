@@ -4,7 +4,7 @@ import './App.css';
 import { withAuthenticator } from 'aws-amplify-react'
 import Amplify, { Auth } from 'aws-amplify';
 import aws_exports from './aws-exports';
-import Header from 'Header'
+import Header from './Header'
 Amplify.configure(aws_exports);
 
 class App extends Component {
