@@ -7,6 +7,12 @@
   height: 40vmin;
 }
 
+.headerSection {
+  display: grid;
+  max-height: 20vh;
+
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
