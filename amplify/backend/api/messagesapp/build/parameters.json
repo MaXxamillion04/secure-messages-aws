@@ -1,0 +1,8 @@
+{
+    "CreateAPIKey": 1,
+    "AppSyncApiName": "messagesapp",
+    "DynamoDBBillingMode": "PAY_PER_REQUEST",
+    "DynamoDBEnableServerSideEncryption": false,
+    "S3DeploymentBucket": "amplify-authcra-dev-151803-deployment",
+    "S3DeploymentRootKey": "amplify-appsync-files/2f2f731e12da3e954c5fa4c13912851110aa0487"
+}
