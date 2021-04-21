@@ -19,7 +19,7 @@ return (<div className="HeaderSection">
     props.userName
 </Grid>
 <Grid item xs={4}>
-    <Button class="SignOutButton" onClick={this.signOut} >Sign Out</Button>
+    <Button class="SignOutButton" onClick={signOut} >Sign Out</Button>
 </Grid>
 </div>
 );
