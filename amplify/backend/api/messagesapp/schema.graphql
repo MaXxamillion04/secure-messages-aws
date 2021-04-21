@@ -1,5 +1,5 @@
 type Message @model {
   id: ID!
-  name: String!
+  subject: String!
   description: String
 }

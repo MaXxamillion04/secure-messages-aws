@@ -24,9 +24,13 @@ async function fetchMessages() {
 }
 
 async function createMessage() {
-  
-  if (!formData.name || !formData.description) return;
-  await API.graphql({ query: createMessageMutation, variables: { input: formData } });
+  if (!formData.subject || !formData.description) return;
+  console.log("try post");
+  try{
+    await API.graphql({ query: createMessageMutation, variables: { input: formData } });
+  } catch(e){
+    console.log(e);
+  }
   console.log(formData)
   setMessages([ ...messages, formData ]);
   setFormData(initialFormState);
@@ -62,8 +66,8 @@ async function deleteMessage({ id }) {
           <div style={{marginBottom: 30}}>
         {
           messages.map(message => (
-            <div key={message.id || message.name}>
-              <h2>{message.name}</h2>
+            <div key={message.id || message.subject}>
+              <h2>{message.subject}</h2>
               <p>{message.description}</p>
               <button onClick={() => deleteMessage(message)}>Delete Message</button>
             </div>
