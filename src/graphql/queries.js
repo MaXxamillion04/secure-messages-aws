@@ -5,7 +5,7 @@ export const getMessage = /* GraphQL */ `
   query GetMessage($id: ID!) {
     getMessage(id: $id) {
       id
-      name
+      subject
       description
       createdAt
       updatedAt
@@ -21,7 +21,7 @@ export const listMessages = /* GraphQL */ `
     listMessages(filter: $filter, limit: $limit, nextToken: $nextToken) {
       items {
         id
-        name
+        subject
         description
         createdAt
         updatedAt

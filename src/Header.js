@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useEffect } from "react";
 import "./App.css";
 //import { AmplifySignOut } from 'aws-amplify-react'
 import Amplify, { Auth } from "aws-amplify";
@@ -9,10 +9,13 @@ import { useState } from "react";
 export default function Header(props) {
   const [userName,setUserName] = useState("Not Signed In?");
   
-  Auth.currentUserInfo().then((user) =>{
-    //console.log("Captured User Info: "+user)
-    setUserName(user.username);
-  });
+  useEffect(()=>{
+    Auth.currentUserInfo().then((user) =>{
+        //console.log("Captured User Info: "+user)
+        setUserName(user.username);
+      });
+  },[Auth]);
+  
   
 
   const signOut = () => {

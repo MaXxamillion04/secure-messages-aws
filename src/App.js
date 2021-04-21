@@ -49,7 +49,7 @@ async function deleteMessage({ id }) {
           <img src={logo} className="App-logo" alt="logo" />
           <p>
             Updated automatically using Amazon AWS Amplify.
-            V1.02
+            V1.03
           </p>
           <input
         onChange={e => setFormData({ ...formData, 'subject': e.target.value})}
@@ -58,7 +58,7 @@ async function deleteMessage({ id }) {
           />
           <input
         onChange={e => setFormData({ ...formData, 'description': e.target.value})}
-        placeholder="Message description"
+        placeholder="Message Description"
         value={formData.description}
           />
           <button onClick={createMessage}>Create Message</button>
